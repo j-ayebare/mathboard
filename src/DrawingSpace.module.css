@@ -1,0 +1,25 @@
+.toolbar   { margin-bottom: 14px; display: flex; flex-direction: column; gap: 10px; }
+.colorRow  { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color .15s, transform .1s;
+}
+.dot:hover   { transform: scale(1.15); }
+.dotActive   { border-color: var(--chalk) !important; }
+
+.controls  { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.sizeRow   { display: flex; align-items: center; gap: 8px; }
+.sizeLabel { font-size: 13px; color: var(--chalk2); }
+.sizeVal   { font-size: 13px; font-weight: 600; color: var(--chalk); min-width: 20px; }
+
+.canvas {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+  touch-action: none;
+  user-select: none;
+}

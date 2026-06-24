@@ -1,0 +1,500 @@
+/* ---------- Page ---------- */
+.page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+  box-sizing: border-box;
+}
+
+.pageTitle {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  color: var(--chalk);
+}
+
+.pageSubtitle {
+  font-size: 15px;
+  color: var(--chalk2);
+  margin-top: 4px;
+  margin-bottom: 28px;
+}
+
+/* ---------- Config Bar ---------- */
+.configBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.configGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.configGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modeRow,
+.timeRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tutorialBtn {
+  align-self: center;
+}
+
+/* ---------- Main Game Layout (Fact Race style) ---------- */
+.gameLayout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* ---------- Player Panels (Left & Right) ---------- */
+.playerPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 320px;
+}
+
+.playerHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.playerDot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.playerNameInput {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  width: 160px;
+  transition: all 0.2s;
+  font-family: 'Nunito', sans-serif;
+}
+
+.playerNameInput:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.playerNameInput:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.playerScore {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin: 8px 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.playerScore span {
+  color: #FFD700;
+}
+
+.roundBadge {
+  font-size: 28px;
+}
+
+/* ---------- Color Section inside Player Panel ---------- */
+.colorSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.colorSectionLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.colorButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 12px;
+}
+
+.colorBtnWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.colorBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Special border for white so it's visible */
+.colorBtn[style*="background: #FFFFFF"] {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.colorBtn:hover:not(:disabled) {
+  transform: scale(1.15);
+  border-color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.colorBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.colorLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Center Panel ---------- */
+.centerPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  gap: 12px;
+  min-height: 350px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.timer {
+  font-size: 44px;
+  font-weight: 700;
+  color: #FFD700;
+}
+
+/* ---------- Cards ---------- */
+.cardsContainer {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gridWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.gridLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--chalk2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.gridRow {
+  display: flex;
+  gap: 4px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Round Info ---------- */
+.roundInfo {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.roundResult {
+  display: block;
+  font-weight: 700;
+  color: #FFD700;
+  margin-top: 4px;
+  font-size: 22px;
+}
+
+/* ---------- Start / Game Over ---------- */
+.startPrompt {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.startPrompt p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.startBtn {
+  font-size: 28px;
+  padding: 16px 40px;
+}
+
+.gameOver {
+  text-align: center;
+  color: white;
+}
+
+.gameOver h2 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.finalScore {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.finalScore > div {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+.winner {
+  font-size: 32px;
+  font-weight: 900;
+  color: #FFD700;
+  margin: 12px 0 20px;
+}
+
+.endButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+/* ---------- Tutorial Overlay ---------- */
+.tutorialOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  padding: 20px;
+}
+
+.tutorialModal {
+  background: var(--navy2, #1a1a2e);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 20px;
+  padding: 30px 40px 40px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.tutorialClose {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tutorialClose:hover {
+  color: white;
+}
+
+.tutorialModal h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: #FFD700;
+  margin: 0 0 16px 0;
+}
+
+.tutorialContent {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.tutorialContent ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.tutorialContent ul ul {
+  margin-top: 4px;
+}
+
+.tutorialContent strong {
+  color: white;
+}
+
+.tutorialContent li {
+  margin-bottom: 4px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .gameLayout {
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 14px;
+  }
+  .playerNameInput {
+    width: 110px;
+    font-size: 17px;
+  }
+  .cell {
+    width: 48px;
+    height: 48px;
+  }
+  .colorBtn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 700px) {
+  .gameLayout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .centerPanel {
+    order: -1;
+    min-height: 180px;
+  }
+  .playerPanel {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px;
+    min-height: auto;
+  }
+  .playerHeader,
+  .playerScore,
+  .colorSection {
+    flex: 1 1 100%;
+  }
+  .colorButtons {
+    gap: 6px 10px;
+  }
+  .colorBtn {
+    width: 40px;
+    height: 40px;
+  }
+  .cell {
+    width: 44px;
+    height: 44px;
+  }
+  .cardsContainer {
+    gap: 16px;
+  }
+}
+
+/* ---------- Animations ---------- */
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,47 @@
+.tubesGrid {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 24px 0;
+}
+.tube {
+  width: 62px;
+  min-height: 220px;
+  background: var(--navy2);
+  border: 2px solid var(--navy3);
+  border-radius: 31px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px;
+  gap: 4px;
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s;
+  position: relative;
+}
+.tubeSelected {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(255,217,61,.25);
+}
+.tubeReceive {
+  border-color: var(--lime);
+}
+.ring {
+  width: 46px;
+  height: 38px;
+  border-radius: 8px;
+  transition: transform .1s;
+}
+.emptyHint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  color: var(--chalk2);
+  opacity: .4;
+  white-space: nowrap;
+  pointer-events: none;
+}

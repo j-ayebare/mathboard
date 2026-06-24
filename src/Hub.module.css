@@ -1,0 +1,67 @@
+.hub {
+  padding: 40px 24px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero          { text-align: center; padding: 48px 0 56px; }
+.heroTitle     { font-size: clamp(36px, 7vw, 64px); font-weight: 900; line-height: 1.1; color: var(--chalk); }
+.em            { color: var(--yellow); font-style: normal; }
+.chalkLine     { width: 80px; height: 4px; background: var(--yellow); border-radius: 4px; margin: 28px auto; }
+.heroSub       { font-size: 18px; color: var(--chalk2); max-width: 500px; margin: 0 auto; line-height: 1.6; }
+
+.sectionLabel  { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--chalk2); margin-bottom: 20px; }
+
+/* How to play */
+.howGrid  { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 48px; }
+.howCard  { background: var(--navy2); border: 1.5px solid var(--navy3); border-radius: var(--radius); padding: 20px; text-align: center; }
+.howNum   { font-family: 'Nunito', sans-serif; font-size: 36px; font-weight: 900; color: var(--yellow); margin-bottom: 8px; }
+.howName  { font-family: 'Nunito', sans-serif; font-weight: 700; color: var(--chalk); margin-bottom: 4px; }
+.howDesc  { font-size: 13px; color: var(--chalk2); line-height: 1.5; }
+
+/* Games grid */
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.gameCard {
+  background: var(--navy2);
+  border: 1.5px solid var(--navy3);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  cursor: pointer;
+  transition: transform .18s, border-color .18s, background .18s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 160px;
+}
+.gameCard:hover  { transform: translateY(-4px); border-color: var(--accent); background: var(--navy3); }
+.gameCard:active { transform: scale(0.97); }
+.gameIcon { font-size: 38px; line-height: 1; }
+.gameName { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 20px; color: var(--chalk); }
+.gameDesc { font-size: 13px; color: var(--chalk2); line-height: 1.5; flex: 1; }
+.gameTag  { display: inline-block; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 6px; align-self: flex-start; }
+
+/* Feature tiles */
+.featureGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 48px; }
+.featureTile {
+  background: var(--navy2);
+  border: 1.5px solid var(--navy3);
+  border-radius: var(--radius);
+  padding: 24px;
+  cursor: pointer;
+  transition: transform .15s, border-color .15s;
+}
+.featureTile:hover  { transform: translateY(-3px); border-color: var(--yellow); }
+.featureTile:active { transform: scale(0.97); }
+.tileIcon { font-size: 32px; margin-bottom: 10px; }
+.tileName { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 18px; color: var(--chalk); }
+.tileDesc { font-size: 13px; color: var(--chalk2); margin-top: 6px; line-height: 1.5; }
+
+@media (max-width: 500px) {
+  .featureGrid { grid-template-columns: 1fr; }
+  .heroTitle   { font-size: 36px; }
+}
